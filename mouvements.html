@@ -1,0 +1,243 @@
+<!-- Page : Tous les articles (page dédiée) -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les mouvements de la Paroisse Sainte-Anne</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for animations and effects */
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1435527173128-983b87201f4d?ixlib=rb-4.0.3');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            transition: all 0.5s ease;
+        }
+        
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+        
+        .sticky-nav.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .sticky-nav.scrolled a {
+            color: #333;
+        }
+        
+        .sticky-nav.scrolled .logo-text {
+            color: #333;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stained-glass {
+            background: linear-gradient(45deg, #8e44ad, #3498db, #2ecc71, #f1c40f, #e74c3c);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+        
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .article-image {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <nav class="sticky-nav bg-white/90 backdrop-blur-md py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-church text-3xl text-blue-600"></i>
+                <span class="logo-text text-2xl font-bold text-black">Paroisse Sainte-Anne de Port-Bouët</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-black hover:text-blue-300 transition">Accueil</a>
+                <a href="#a-propos" class="text-black hover:text-blue-300 transition">À propos</a>
+                <a href="article.html" class="text-black hover:text-blue-300 transition">Articles</a>
+                <a href="#evenements" class="text-black hover:text-blue-300 transition">Événements</a>
+                <a href="#messe" class="text-black hover:text-blue-300 transition">Horaires des messes</a>
+                <a href="#contact" class="text-black hover:text-blue-300 transition">Contact</a>
+            </div>
+            <button class="md:hidden text-white">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+  <!-- Header -->
+  <header class="bg-white shadow py-6">
+    <div class="container mx-auto px-6">
+      <h1 class="text-3xl font-bold">Les mouvements de la Paroisse </h1>
+      <p class="text-sm text-gray-600 mt-2">Parcourez nos écrits pour connaitres tous les mouvements de la paroisse</p>
+    </div>
+  </header>
+
+<main class="py-12 px-6 container mx-auto">
+  <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+    <!-- Articles (3 colonnes sur desktop) -->
+    <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-8">
+  <!-- ACTION CATHOLIQUE -->
+  <div class="bg-white rounded-lg overflow-hidden shadow-md transition duration-300 card-hover">
+    <img src="/images/action-catholique.jpg" alt="Action Catholique" class="article-image">
+    <div class="p-6">
+      <h3 class="text-xl font-bold text-gray-800 mb-3">Action Catholique</h3>
+      <p class="text-gray-600 mb-4">Mouvements engagés dans la transformation chrétienne de la société.</p>
+      <a href="/groupes/action-catholique.html" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+        En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- CEB -->
+  <div class="bg-white rounded-lg overflow-hidden shadow-md transition duration-300 card-hover">
+    <img src="/images/ceb.jpg" alt="CEB" class="article-image">
+    <div class="p-6">
+      <h3 class="text-xl font-bold text-gray-800 mb-3">CEB</h3>
+      <p class="text-gray-600 mb-4">Communautés Ecclésiales de Base : vivre la foi en petites fraternités locales.</p>
+      <a href="/groupes/ceb.html" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+        En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- EDUCATIFS -->
+  <div class="bg-white rounded-lg overflow-hidden shadow-md transition duration-300 card-hover">
+    <img src="/images/educatifs.jpg" alt="Éducatifs" class="article-image">
+    <div class="p-6">
+      <h3 class="text-xl font-bold text-gray-800 mb-3">Éducatifs</h3>
+      <p class="text-gray-600 mb-4">Groupes dédiés à la formation humaine, morale et spirituelle des jeunes.</p>
+      <a href="/groupes/educatifs.html" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+        En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- ENFANTS -->
+  <div class="bg-white rounded-lg overflow-hidden shadow-md transition duration-300 card-hover">
+    <img src="/images/enfants.jpg" alt="Enfants" class="article-image">
+    <div class="p-6">
+      <h3 class="text-xl font-bold text-gray-800 mb-3">Enfants</h3>
+      <p class="text-gray-600 mb-4">Activités spirituelles et ludiques pour les plus jeunes de la paroisse.</p>
+      <a href="/groupes/enfants.html" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+        En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- FAMILIAUX -->
+  <div class="bg-white rounded-lg overflow-hidden shadow-md transition duration-300 card-hover">
+    <img src="/images/familiaux.jpg" alt="Familiaux" class="article-image">
+    <div class="p-6">
+      <h3 class="text-xl font-bold text-gray-800 mb-3">Familiaux</h3>
+      <p class="text-gray-600 mb-4">Groupes de soutien et d’accompagnement pour les couples et les familles.</p>
+      <a href="/groupes/familiaux.html" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+        En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- GROUPES ETHNIQUES -->
+  <div class="bg-white rounded-lg overflow-hidden shadow-md transition duration-300 card-hover">
+    <img src="/images/groupes-ethniques.jpg" alt="Groupes ethniques" class="article-image">
+    <div class="p-6">
+      <h3 class="text-xl font-bold text-gray-800 mb-3">Groupes ethniques</h3>
+      <p class="text-gray-600 mb-4">Communautés culturelles unies dans la foi et la tradition.</p>
+      <a href="/groupes/ethniques.html" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+        En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- LITURGIQUES -->
+  <div class="bg-white rounded-lg overflow-hidden shadow-md transition duration-300 card-hover">
+    <img src="/images/liturgiques.jpg" alt="Liturgiques" class="article-image">
+    <div class="p-6">
+      <h3 class="text-xl font-bold text-gray-800 mb-3">Liturgiques</h3>
+      <p class="text-gray-600 mb-4">Groupes qui animent les célébrations et la prière communautaire.</p>
+      <a href="/groupes/liturgiques.html" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+        En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- SOLIDARITÉ -->
+  <div class="bg-white rounded-lg overflow-hidden shadow-md transition duration-300 card-hover">
+    <img src="/images/solidarite.jpg" alt="Solidarité" class="article-image">
+    <div class="p-6">
+      <h3 class="text-xl font-bold text-gray-800 mb-3">Solidarité</h3>
+      <p class="text-gray-600 mb-4">Actions caritatives et entraide pour les plus démunis.</p>
+      <a href="/groupes/solidarite.html" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+        En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- SPIRITUELS & ÉVANGÉLIQUES -->
+  <div class="bg-white rounded-lg overflow-hidden shadow-md transition duration-300 card-hover md:col-span-2">
+    <img src="/images/spirituels.jpg" alt="Spirituels & Évangéliques" class="article-image">
+    <div class="p-6">
+      <h3 class="text-xl font-bold text-gray-800 mb-3">Spirituels & Évangéliques</h3>
+      <p class="text-gray-600 mb-4">Groupes de prière, de louange et d’évangélisation.</p>
+      <a href="/groupes/spirituels.html" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+        En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Sidebar (1 colonne sur desktop) -->
+    <aside class="space-y-8">
+      <div class="bg-white rounded-lg shadow p-6">
+        <h3 class="text-xl font-bold mb-4 text-blue-600">Articles récents</h3>
+        <ul class="space-y-3 text-sm text-gray-700">
+          <li><a href="#" class="hover:underline">Le Baptême : porte de la foi</a></li>
+          <li><a href="#" class="hover:underline">Pourquoi l’Eucharistie est centrale ?</a></li>
+          <li><a href="#" class="hover:underline">Le sacrement du pardon expliqué</a></li>
+        </ul>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6">
+        <h3 class="text-xl font-bold mb-4 text-blue-600">Liens utiles</h3>
+        <ul class="space-y-3 text-sm text-gray-700">
+          <li><a href="/index.html#messe" class="hover:underline">Horaires des messes</a></li>
+          <li><a href="/index.html#evenements" class="hover:underline">Événements à venir</a></li>
+          <li><a href="/index.html#contact" class="hover:underline">Contact & adresse</a></li>
+          <li><a href="/index.html#articles" class="hover:underline">Retour à tous les articles</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</main>
+
+
+    <footer class="bg-gray-900 text-white py-8 text-center mt-16">
+        <p class="text-gray-400">© 2023 Église Saint-Pierre. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

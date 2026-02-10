@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les 7 sacrements de l'Église - Église Sainte-Anne</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for animations and effects */
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1435527173128-983b87201f4d?ixlib=rb-4.0.3');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            transition: all 0.5s ease;
+        }
+        
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+        
+        .sticky-nav.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .sticky-nav.scrolled a {
+            color: #333;
+        }
+        
+        .sticky-nav.scrolled .logo-text {
+            color: #333;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stained-glass {
+            background: linear-gradient(45deg, #8e44ad, #3498db, #2ecc71, #f1c40f, #e74c3c);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+        
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .article-image {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <nav class="sticky-nav bg-white/90 backdrop-blur-md py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-church text-3xl text-blue-600"></i>
+                <span class="logo-text text-2xl font-bold text-black">Paroisse Sainte-Anne de Port-Bouët</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-black hover:text-blue-300 transition">Accueil</a>
+                <a href="#a-propos" class="text-black hover:text-blue-300 transition">À propos</a>
+                <a href="article.html" class="text-black hover:text-blue-300 transition">Articles</a>
+                <a href="#evenements" class="text-black hover:text-blue-300 transition">Événements</a>
+                <a href="#messe" class="text-black hover:text-blue-300 transition">Horaires des messes</a>
+                <a href="#contact" class="text-black hover:text-blue-300 transition">Contact</a>
+            </div>
+            <button class="md:hidden text-white">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+  <!-- Header -->
+  <header class="bg-white shadow py-6">
+    <div class="container mx-auto px-6">
+      <h1 class="text-3xl font-bold">Les 7 sacrements de l'Église</h1>
+      <p class="text-sm text-gray-600 mt-2">Découvrez les sept sacrements qui marquent les étapes importantes de la vie chrétienne.</p>
+    </div>
+  </header>
+
+  <!-- Content + Sidebar -->
+  <main class="py-12 px-6 container mx-auto">
+    <!-- Article content -->
+      <img src="https://images.unsplash.com/photo-1544830287-7e0b761d7b15?auto=format&fit=crop&w=800&q=60" alt="Sacrements" class="w-full h-64 object-cover rounded-lg shadow mb-8">
+      <p>Les sacrements sont des signes visibles du don gratuit de Dieu (la grâce), qui permettent aux hommes de prendre part à la vie divine. Ils ont été institués par le Christ et sont confiés à l'Église. Les sacrements sont au nombre de sept :</p>
+
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+      
+    <!-- Articles (3 colonnes sur desktop) -->
+    <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+  <!-- Sacrement 1 -->
+  <div class="bg-white rounded-lg overflow-hidden shadow-md transition duration-300 card-hover">
+    <img src="/images/bapteme.jpg" alt="Baptême" class="article-image">
+    <div class="p-6">
+      <h3 class="text-xl font-bold text-gray-800 mb-3">Le Baptême</h3>
+      <p class="text-gray-600 mb-4">Premier sacrement de l’initiation chrétienne, il fait entrer dans la vie nouvelle du Christ.</p>
+      <a href="/sacrements/bapteme.html" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+        En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sacrement 2 -->
+  <div class="bg-white rounded-lg overflow-hidden shadow-md transition duration-300 card-hover">
+    <img src="/images/eucharistie.jpg" alt="Eucharistie" class="article-image">
+    <div class="p-6">
+      <h3 class="text-xl font-bold text-gray-800 mb-3">L’Eucharistie</h3>
+      <p class="text-gray-600 mb-4">Source et sommet de la vie chrétienne, elle rend présent le sacrifice du Christ.</p>
+      <a href="/sacrements/eucharistie.html" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+        En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sacrement 3 -->
+  <div class="bg-white rounded-lg overflow-hidden shadow-md transition duration-300 card-hover">
+    <img src="/images/confirmation.jpg" alt="Confirmation" class="article-image">
+    <div class="p-6">
+      <h3 class="text-xl font-bold text-gray-800 mb-3">La Confirmation</h3>
+      <p class="text-gray-600 mb-4">Elle perfectionne la grâce du baptême et donne la force de témoigner du Christ.</p>
+      <a href="/sacrements/confirmation.html" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+        En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sacrement 4 -->
+  <div class="bg-white rounded-lg overflow-hidden shadow-md transition duration-300 card-hover">
+    <img src="/images/reconciliation.jpg" alt="Réconciliation" class="article-image">
+    <div class="p-6">
+      <h3 class="text-xl font-bold text-gray-800 mb-3">La Réconciliation</h3>
+      <p class="text-gray-600 mb-4">Le pardon des péchés par la miséricorde de Dieu, pour retrouver la paix intérieure.</p>
+      <a href="/sacrements/reconciliation.html" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+        En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sacrement 5 -->
+  <div class="bg-white rounded-lg overflow-hidden shadow-md transition duration-300 card-hover">
+    <img src="/images/mariage.jpg" alt="Mariage" class="article-image">
+    <div class="p-6">
+      <h3 class="text-xl font-bold text-gray-800 mb-3">Le Mariage</h3>
+      <p class="text-gray-600 mb-4">Union sacrée entre un homme et une femme, signe de l’amour du Christ pour l’Église.</p>
+      <a href="/sacrements/mariage.html" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+        En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sacrement 6 -->
+  <div class="bg-white rounded-lg overflow-hidden shadow-md transition duration-300 card-hover">
+    <img src="/images/ordination.jpg" alt="Ordination" class="article-image">
+    <div class="p-6">
+      <h3 class="text-xl font-bold text-gray-800 mb-3">L’Ordination</h3>
+      <p class="text-gray-600 mb-4">Par ce sacrement, des hommes sont consacrés pour servir comme diacres, prêtres ou évêques.</p>
+      <a href="/sacrements/ordination.html" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+        En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sacrement 7 -->
+  <div class="bg-white rounded-lg overflow-hidden shadow-md transition duration-300 card-hover md:col-span-2">
+    <img src="/images/malades.jpg" alt="Onction des malades" class="article-image">
+    <div class="p-6">
+      <h3 class="text-xl font-bold text-gray-800 mb-3">L’Onction des malades</h3>
+      <p class="text-gray-600 mb-4">Signe de la tendresse de Dieu pour les malades, elle apporte réconfort et guérison spirituelle.</p>
+      <a href="/sacrements/onction.html" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+        En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+  </div>
+    </div>
+    
+
+    <!-- Sidebar -->
+    <aside class="space-y-8">
+      <div class="bg-white rounded-lg shadow p-6">
+        <h3 class="text-xl font-bold mb-4 text-blue-600">Articles récents</h3>
+        <ul class="space-y-3 text-sm text-gray-700">
+          <li><a href="#" class="hover:underline">Le Baptême : porte de la foi</a></li>
+          <li><a href="#" class="hover:underline">Pourquoi l’Eucharistie est centrale ?</a></li>
+          <li><a href="#" class="hover:underline">Le sacrement du pardon expliqué</a></li>
+        </ul>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6">
+        <h3 class="text-xl font-bold mb-4 text-blue-600">Liens utiles</h3>
+        <ul class="space-y-3 text-sm text-gray-700">
+          <li><a href="/index.html#messe" class="hover:underline">Horaires des messes</a></li>
+          <li><a href="/index.html#evenements" class="hover:underline">Événements à venir</a></li>
+          <li><a href="/index.html#contact" class="hover:underline">Contact & adresse</a></li>
+          <li><a href="/index.html#articles" class="hover:underline">Retour à tous les articles</a></li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-10">
+    <div class="container mx-auto px-6 text-center">
+      <p>&copy; 2025 Église Sainte-Anne de Port-Bouët. Tous droits réservés.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faire un don - Église Sainte-Anne</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-white shadow py-6">
+    <div class="container mx-auto px-6">
+      <h1 class="text-3xl font-bold">Soutenir notre Église</h1>
+      <p class="text-gray-600 mt-2">Vos dons permettent à notre paroisse de vivre et de rayonner</p>
+    </div>
+  </header>
+
+  <!-- Donation Section -->
+  <main class="container mx-auto px-6 py-12 max-w-4xl">
+    <div class="bg-white rounded-lg shadow-lg p-8 mb-12">
+      <h2 class="text-2xl font-bold text-blue-600 mb-6">Faire un don en ligne</h2>
+      <form action="#" method="POST" class="space-y-6">
+        <div>
+          <label for="nom" class="block text-sm font-medium text-gray-700">Nom complet</label>
+          <input type="text" id="nom" name="nom" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Adresse e-mail</label>
+          <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label for="montant" class="block text-sm font-medium text-gray-700">Montant du don (en FCFA)</label>
+          <input type="number" id="montant" name="montant" required min="100" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-700">Message (facultatif)</label>
+          <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+          Faire un don
+        </button>
+      </form>
+    </div>
+
+    <!-- Moyen de paiement direct -->
+    <div class="bg-white rounded-lg shadow-lg p-8">
+      <h2 class="text-2xl font-bold text-blue-600 mb-6">Autres moyens de don</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-gray-700">
+        <div class="bg-orange-100 border-l-4 border-orange-500 p-4 rounded">
+          <p class="font-bold text-orange-600 mb-1">Orange Money</p>
+          <p>Composez <strong>#144#</strong> puis Option 4, puis 3 et le code <strong>0408</strong></p>
+        </div>
+        <div class="bg-yellow-100 border-l-4 border-yellow-500 p-4 rounded">
+          <p class="font-bold text-yellow-700 mb-1">MTN Mobile Money</p>
+          <p>Envoyez au <strong>+225 05 64 87 08 16</strong></p>
+        </div>
+        <div class="bg-green-100 border-l-4 border-green-500 p-4 rounded">
+          <p class="font-bold text-green-700 mb-1">Moov Money</p>
+          <p>Envoyez au <strong>+225 01 40 54 19 19</strong></p>
+        </div>
+        <div class="bg-blue-100 border-l-4 border-blue-500 p-4 rounded">
+          <p class="font-bold text-blue-700 mb-1">Wave</p>
+          <p>Contactez l’église pour recevoir le lien de paiement sécurisé via Wave</p>
+        </div>
+      </div>
+
+      <div class="mt-6 flex justify-center">
+        <img src="image.png" alt="Moyens de paiement visuels" class="rounded-lg shadow w-full max-w-2xl">
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-10 mt-12">
+    <div class="container mx-auto px-6 text-center">
+      <p>&copy; 2025 Église Sainte-Anne de Port-Bouët. Tous droits réservés.</p>
+    </div>
+  </footer>
+</body>
+</html>

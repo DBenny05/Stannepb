@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tous les articles - Église Sainte-Anne</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for animations and effects */
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1435527173128-983b87201f4d?ixlib=rb-4.0.3');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            transition: all 0.5s ease;
+        }
+        
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+        
+        .sticky-nav.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .sticky-nav.scrolled a {
+            color: #333;
+        }
+        
+        .sticky-nav.scrolled .logo-text {
+            color: #333;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stained-glass {
+            background: linear-gradient(45deg, #8e44ad, #3498db, #2ecc71, #f1c40f, #e74c3c);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+        
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .article-image {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <nav class="sticky-nav bg-white/90 backdrop-blur-md py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-church text-3xl text-blue-600"></i>
+                <span class="logo-text text-2xl font-bold text-black">Église Saint-Anne de Port-Bouët</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-black hover:text-blue-300 transition">Accueil</a>
+                <a href="#a-propos" class="text-black hover:text-blue-300 transition">À propos</a>
+                <a href="article.html" class="text-black hover:text-blue-300 transition">Articles</a>
+                <a href="#evenements" class="text-black hover:text-blue-300 transition">Événements</a>
+                <a href="#messe" class="text-black hover:text-blue-300 transition">Horaires des messes</a>
+                <a href="#contact" class="text-black hover:text-blue-300 transition">Contact</a>
+            </div>
+            <button class="md:hidden text-white">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+    <!-- Header -->
+    <header class="bg-white shadow-md py-6">
+        <div class="container mx-auto px-6">
+            <h1 class="text-3xl font-bold">Articles et Méditations</h1>
+            <p class="text-gray-600">Retrouvez ici tous nos articles pour nourrir votre foi</p>
+        </div>
+    </header>
+
+    <!-- Articles List -->
+    <main class="container mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Example article card -->
+            <article class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                <img src="https://images.unsplash.com/photo-1544830287-7e0b761d7b15?auto=format&fit=crop&w=800&q=60" alt="Sacrements" class="h-48 w-full object-cover">
+                <div class="p-6">
+                    <span class="text-sm text-gray-500">Publié le 15 juin 2023</span>
+                    <h2 class="text-xl font-bold text-gray-800 mt-2">Les 7 sacrements de l'Église</h2>
+                    <p class="text-gray-600 mt-2">Les sacrements sont des signes visibles du don gratuit de Dieu...</p>
+                    <a href="article-sacrements.html" class="text-blue-600 hover:underline mt-4 inline-block">Lire plus</a>
+                </div>
+            </article>
+            <!-- Ajoute d'autres articles ici -->
+        </div>
+
+        <!-- Pagination -->
+        <div class="mt-12 flex justify-center items-center space-x-2">
+            <a href="#" class="px-4 py-2 border rounded hover:bg-blue-600 hover:text-white">1</a>
+            <a href="#" class="px-4 py-2 border rounded hover:bg-blue-600 hover:text-white">2</a>
+            <a href="#" class="px-4 py-2 border rounded hover:bg-blue-600 hover:text-white">3</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-church text-3xl text-blue-400"></i>
+                        <span class="text-2xl font-bold">Église Saint-Anne de Port-Bouët</span>
+                    </div>
+                    <p class="text-gray-400">Une communauté de foi, d'espérance et d'amour depuis 1856.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Liens rapides</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#accueil" class="text-gray-400 hover:text-white transition">Accueil</a></li>
+                        <li><a href="#a-propos" class="text-gray-400 hover:text-white transition">À propos</a></li>
+                        <li><a href="#articles" class="text-gray-400 hover:text-white transition">Articles</a></li>
+                        <li><a href="#evenements" class="text-gray-400 hover:text-white transition">Événements</a></li>
+                        <li><a href="#messe" class="text-gray-400 hover:text-white transition">Horaires des messes</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Ministères</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Chœur paroissial</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Catéchisme</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Groupe de jeunes</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Service social</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Aumônerie</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Abonnez-vous à notre newsletter pour recevoir les dernières nouvelles.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Votre email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-900 w-full">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 Paroisse Saint-Anne de Port-Bouët. Tous droits réservés.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
